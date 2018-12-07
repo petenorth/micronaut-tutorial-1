@@ -1,0 +1,10 @@
+micronaut:
+    application:
+        name: gateway 
+    server:
+        port: 8080
+consul:
+    client:
+        registration: 
+            enabled: true
+        defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
