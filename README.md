@@ -41,6 +41,8 @@ Just make sure that everything has been built (kotlin seems to require this as t
 
 ### Create applications
 
+The following commands create applications from image streams (these are created by the `oc new-build` command in the previous step)
+
     oc new-app -i books
     oc new-app -i inventory
     oc new-app -i gateway
@@ -59,7 +61,7 @@ Expose gateway service as a route to allow ingress from outside the cluster
 
 ### Test
 
-So the follow should 'just work' but uses a fancy golang template
+The follow should 'just work' but uses a fancy golang template
 
     curl http://$(oc get route gateway --template='{{ .spec.host }}')/api/books
 
