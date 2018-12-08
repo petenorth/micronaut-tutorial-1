@@ -71,3 +71,6 @@ Otherwise just do
 
 and cut and paste to form the desired URL.
 
+### TODO
+
+Run in a simple kubernetes environment i.e. only use kubectl and then go on to create helm charts.
