@@ -26,7 +26,7 @@ An Openshift environment is required, when running locally use minishift.
 
 ### Local build
 
-Just make sure that everything has been built (kotlin seems to required this as the `gradle run` command does build jars?)
+Just make sure that everything has been built (kotlin seems to require this as the `gradle run` command doesn't build jars?)
  
     ./gradlew clean build
 
