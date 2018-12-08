@@ -3,8 +3,3 @@ micronaut:
         name: books
     server:
         port: 8082
-consul:
-    client:
-        registration: 
-            enabled: true
-        defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"

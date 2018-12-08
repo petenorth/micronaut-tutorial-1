@@ -1,3 +1,4 @@
 consul:
     client:
-        registration: enabled: false
+        registration: 
+            enabled: false
