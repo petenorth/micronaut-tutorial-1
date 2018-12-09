@@ -68,5 +68,10 @@ Access using `minikube ip` .
 * Create declarative yml/json for the resource definitions (one click creation)
 * Implement via Helm 
 * Use Consul within Kubernetes (showing that the service discovery mechanism doesn't have to be Kubernetes based when running in Kubernetes).
+* Istio enable things (service discovery, service to service communication, metrics and logging, traffic behaviour including retries circuit breaker etc.) Means that 
+** Consul not needed
+** JWT stuff not needed in application code base (??)
+** Zipkin not needed (no configuration in code base)
+** BUT think about running locally without Kubernetes/Istio 
 * Enable Zipkin
 
