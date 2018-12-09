@@ -7,4 +7,5 @@ This means that to enable Consul based service discovery now requires the enabli
 
 * [Running Locally](README_local.md)
 * [Running in Openshift](README_openshift.md)
+* [Running in Kubernetes](README_kubernetes.md)
 
