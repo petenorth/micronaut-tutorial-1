@@ -43,7 +43,7 @@ wait until it appears in
     kubectl scale --replicas=0 deployment/gateway
     kubectl scale --replicas=0 deployment/books
 
-Wait until terminated
+Wait until terminated and then
 
     kubectl scale --replicas=1 deployment/inventory
     kubectl scale --replicas=1 deployment/gateway
