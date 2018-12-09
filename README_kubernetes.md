@@ -63,9 +63,21 @@ Access using `minikube ip` .
     
     curl -L -k "http://$(minikube ip)/api/books"
 
+### Export definitions 
+
+    kubectl get services --export=true -o yaml > kubernetes/services.yaml 
+    kubectl get deployments --export=true -o yaml > kubernetes/deployments.yaml
+
+### To recreate 
+
+The ingress definition file was created earlier and has to be created by hand as the ingress definition cannot currently be created via any simple kubectl command. 
+
+    kubectl create -f kubernetes/services.yaml
+    kubectl create -f kubernetes/deployments.yaml
+    kubectl create -f kubernetes/ingress.yaml
+
 ### TODO
 
-* Create declarative yml/json for the resource definitions (one click creation)
 * Implement via Helm 
 * Use Consul within Kubernetes (showing that the service discovery mechanism doesn't have to be Kubernetes based when running in Kubernetes).
 * Enable Zipkin

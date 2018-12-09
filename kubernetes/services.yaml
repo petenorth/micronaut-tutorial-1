@@ -1,0 +1,101 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: 2018-12-09T10:38:44Z
+    labels:
+      run: books
+    name: books
+    namespace: default
+    resourceVersion: "2015"
+    selfLink: /api/v1/namespaces/default/services/books
+    uid: 9a0aab6b-fb9e-11e8-9dc4-e27b19de179a
+  spec:
+    clusterIP: 10.106.31.221
+    ports:
+    - port: 8082
+      protocol: TCP
+      targetPort: 8082
+    selector:
+      run: books
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: 2018-12-09T10:50:32Z
+    labels:
+      run: gateway
+    name: gateway
+    namespace: default
+    resourceVersion: "2889"
+    selfLink: /api/v1/namespaces/default/services/gateway
+    uid: 40538722-fba0-11e8-9dc4-e27b19de179a
+  spec:
+    clusterIP: 10.109.12.250
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      run: gateway
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: 2018-12-09T10:38:52Z
+    labels:
+      run: inventory
+    name: inventory
+    namespace: default
+    resourceVersion: "2027"
+    selfLink: /api/v1/namespaces/default/services/inventory
+    uid: 9eab7206-fb9e-11e8-9dc4-e27b19de179a
+  spec:
+    clusterIP: 10.102.83.11
+    ports:
+    - port: 8081
+      protocol: TCP
+      targetPort: 8081
+    selector:
+      run: inventory
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: 2018-12-09T10:15:27Z
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "20"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: 59383b12-fb9b-11e8-9dc4-e27b19de179a
+  spec:
+    clusterIP: 10.96.0.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    sessionAffinity: ClientIP
+    sessionAffinityConfig:
+      clientIP:
+        timeoutSeconds: 10800
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
