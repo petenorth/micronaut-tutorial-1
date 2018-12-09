@@ -25,6 +25,15 @@ The following commands create applications from image streams (these are created
     oc new-app -i inventory
     oc new-app -i gateway
 
+### Redeploy applications 
+
+Redeploy applications so that environment variables for services are picked up.
+
+    oc deploy --latest dc/books
+    oc deploy --latest dc/inventory
+    oc deploy --latest dc/gateway
+
+
 ### Expose the resulting deployment configurations as services
 
     oc expose dc books --port=8082
