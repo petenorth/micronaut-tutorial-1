@@ -10,18 +10,18 @@ Just make sure that everything has been built (kotlin seems to require this as t
 
 ### Docker builds
 
-    docker build books -t petenorth/micronaut-books
-    docker build inventory -t petenorth/micronaut-inventory
-    docker build gateway -t petenorth/micronaut-gateway
-    docker push petenorth/micronaut-books
-    docker push petenorth/micronaut-inventory
-    docker push petenorth/micronaut-gateway
+    docker build books -t <YOUR NAMESPACE>/micronaut-books
+    docker build inventory -t <YOUR NAMESPACE>/micronaut-inventory
+    docker build gateway -t <YOUR NAMESPACE>/micronaut-gateway
+    docker push <YOUR NAMESPACE>/micronaut-books
+    docker push <YOUR NAMESPACE>/micronaut-inventory
+    docker push <YOUR NAMESPACE>/micronaut-gateway
 
 ### Create deployments in Kubernetes
 
-    kubectl run books --image=petenorth/micronaut-books --port=8082
-    kubectl run inventory --image=petenorth/micronaut-inventory --port=8081
-    kubectl run gateway --image=petenorth/micronaut-gateway --port=8080
+    kubectl run books --image=<YOUR NAMESPACE>/micronaut-books --port=8082
+    kubectl run inventory --image=<YOUR NAMESPACE>/micronaut-inventory --port=8081
+    kubectl run gateway --image=<YOUR NAMESPACE>/micronaut-gateway --port=8080
 
 ### Create service definitions for the deployments
 
