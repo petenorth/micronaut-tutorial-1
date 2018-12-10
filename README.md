@@ -5,11 +5,13 @@ When running in Openshift, Micronaut detects two environments 'k8s' and 'cloud' 
 
 To this end the Consul based service discovery is now not enabled by default and requires the enabling of a 'consul' environment' this activates the application-consul.yml files.
 
-* [Running Locally](README_local.md)
-* [Running in Openshift](README_openshift.md)
-* [Running in Kubernetes](README_kubernetes.md) (using Kubernetes based service discovery)
-* TODO [Running in Kubernetes with Zipkin](README_zipkin.md) (using Kubernetes based service discovery)
-* TODO [Running in Kubernetes](README_kubernetes_consul.md) (using Consul based service discovery)
-* TODO [Deploy using Helm Charts](README_helm.md) (using Kubernetes based service discovery)
-* TODO [Running in Kubernetes with Istio](README_helm.md) (using Istio based service discovery and tracing)
+|Run/Deploy Style|Status|Service Discovery Method|Tracing Method|
+|---|---|---|---|
+|[Running Locally](README_local.md)||Consul||
+|[Running in Openshift](README_openshift.md)||Kubernetes||
+|[Running in Kubernetes](README_kubernetes.md)||Kubernetes||
+|[Running in Kubernetes with Zipkin](README_zipkin.md)|TODO|Kubernetes|Zipkin|
+|[Running in Kubernetes](README_kubernetes_consul.md)|TODO|Consul||
+|[Deploy using Helm Charts](README_helm.md)|TODO|Kubernetes||
+|[Running in Kubernetes with Istio](README_isto.md)|TODO|Istio|Istio|
 
