@@ -6,7 +6,7 @@ When running in Openshift, Micronaut detects two environments 'k8s' and 'cloud' 
 To this end the Consul based service discovery is now not enabled by default and requires the enabling of a 'consul' environment' this activates the application-consul.yml files.
 
 |Run/Deploy Style|Status|Service Discovery Method|Tracing Method|
-|---|---|---|---|
+|:---|:---|:---|:---|
 |[Running Locally](README_local.md)||Consul||
 |[Running in Openshift](README_openshift.md)||Kubernetes||
 |[Running in Kubernetes](README_kubernetes.md)||Kubernetes||
