@@ -11,7 +11,7 @@ To this end the Consul based service discovery is now not enabled by default and
 |[Running in Openshift](README_openshift.md)||Kubernetes||
 |[Running in Kubernetes](README_kubernetes.md)||Kubernetes||
 |[Running in Kubernetes with Zipkin](README_zipkin.md)|TODO|Kubernetes|Zipkin|
-|[Running in Kubernetes](README_kubernetes_consul.md)|Not Working (see note below)|Consul||
+|[Running in Kubernetes with Consul](README_kubernetes_consul.md)|Not Working (see note below)|Consul||
 |[Deploy using Helm Charts](README_helm.md)|TODO|Kubernetes||
 |[Running in Kubernetes with Istio](README_isto.md)|TODO|Istio|Istio|
 
