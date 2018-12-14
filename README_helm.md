@@ -37,7 +37,7 @@ wait until it appears in
 
 ### Install via Helm
 
-These are microservices so are intended to be independent with separate release cycles hence separate directories `helm/books, `helm/inventory` and `helm/gateway`
+These are microservices so are intended to be independent with separate release cycles hence separate directories `helm/books`, `helm/inventory` and `helm/gateway`
 
     helm install helm/books --name books-dev
     helm install helm/inventory --name inventory-dev
