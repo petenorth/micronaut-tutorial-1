@@ -23,7 +23,7 @@ Rather than install helm via brew I use a docker executable, note how it mounts 
 
     alias helm="docker run -ti --rm -v $(pwd):/apps:rw -v ~/.kube:/root/.kube -v ~/.minikube:~/.minikube alpine/helm:2.11.0"
 
-Use the `helm` to install Tiller (the Helm server-side component) onto your Kubernetes Cluster and set up local configuration in $HELM_HOME (default ~/.helm/).
+Use the `helm init` to install Tiller (the Helm server-side component) onto your Kubernetes Cluster and set up local configuration in $HELM_HOME (default ~/.helm/):
 
     helm init
 
