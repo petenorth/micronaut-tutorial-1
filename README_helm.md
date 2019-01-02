@@ -65,7 +65,7 @@ The Helm charts are based on the output of
 
 To see all the change simply re-run these commands and do a `git diff`
 
-The output of `helm create` includes readiness and liveness checks in the deployment.yaml, by default these use a path of `/`. The Micronaut Framework includes support for health check endpoints ( https://docs.micronaut.io/latest/guide/index.html#healthEndpoint ) . In a slightly quick and dirty approach the required addition to the `build.gradle` file in each micro service project was made
+The output of `helm create` includes readiness and liveness checks in the deployment.yaml, by default these use a path of `/`. The Micronaut Framework includes support for health check endpoints ( https://docs.micronaut.io/latest/guide/index.html#healthEndpoint ) via an endpoint `/health`. Therefore the `templates/deployment.yaml` has been changed accordingly . In a slightly quick and dirty approach the required addition to the `build.gradle` file in each micro service project was made
 
     compile "io.micronaut:micronaut-management"
 
