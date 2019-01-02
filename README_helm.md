@@ -19,7 +19,7 @@ Just make sure that everything has been built (kotlin seems to require this as t
 
 ### Initialize Helm on the client and server
 
-Rather than install helm via brew I use a docker executable, note how it mounts in read write mode the `pwd`
+Rather than install helm via brew I use a docker executable, note how it mounts in read write mode the `pwd`. This MUST be run from the root folder of where ever this project has been cloned to.
 
     alias helm="docker run -ti --rm -v $(pwd):/apps:rw -v ~/.kube:/root/.kube -v ~/.minikube:$(echo ~)/.minikube alpine/helm:2.11.0"
 
