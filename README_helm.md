@@ -21,7 +21,7 @@ Just make sure that everything has been built (kotlin seems to require this as t
 
 Rather than install helm via brew I use a docker executable, note how it mounts in read write mode the `pwd`
 
-    alias helm="docker run -ti --rm -v $(pwd):/apps:rw -v ~/.kube:/root/.kube -v ~/.minikube:~/.minikube alpine/helm:2.11.0"
+    alias helm="docker run -ti --rm -v $(pwd):/apps:rw -v ~/.kube:/root/.kube -v ~/.minikube:$(echo ~)/.minikube alpine/helm:2.11.0"
 
 Use the `helm init` to install Tiller (the Helm server-side component) onto your Kubernetes Cluster and set up local configuration in $HELM_HOME (default ~/.helm/):
 
