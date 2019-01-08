@@ -63,9 +63,9 @@ Make sure you are in the root directory of where ever you have clone this projec
 
 Install a 'current' version
 
-    helm install helm/books --name books-current --set image.tag=1.0.152
-    kubectl get deployment books --export=true -o yaml > books.yaml
-    ~/istio-1.0.5/bin/istioctl kube-inject -f books.yaml | kubectl apply -f -
+    helm install helm/books --name books-current --set image.tag=1.0.152 --set fullnameOverride=books-current
+    kubectl get deployment books-current --export=true -o yaml > books-current.yaml
+    ~/istio-1.0.5/bin/istioctl kube-inject -f books-current.yaml | kubectl apply -f -
 
 Install a 'canary' version
 
@@ -79,5 +79,5 @@ Wait for everything to deploy
     
 Should get to point where you have pods running
 
-    books-7545c86bf6-7bdrz          2/2       Running   0          14h
+    books-current-7545c86bf6-7bdrz  2/2       Running   0          14h
     books-canary-589b867d7d-6t8sk   2/2       Running   0          14h
