@@ -23,11 +23,11 @@
 
 The CI/CD pipelines will have managed the following in a real life situation, note that these steps have already taken place:
 
-### create a release branch
+### Create a release branch
 
     git checkout -b 1.0.x
 
-### edit the source code to return something clearly identifying the version (1.0.152) of code, build, commit, push, docker build, docker push and git tag
+### Edit the source code to return something clearly identifying the version (1.0.152) of code, build, commit, push, docker build, docker push and git tag
 
     vi books/src/main/groovy/example/micronaut/BooksRepositoryImpl.groovy 
     cd books
@@ -41,7 +41,7 @@ The CI/CD pipelines will have managed the following in a real life situation, no
     git tag -a 1.0.152 -m "a release that will be used for the existing version of code in a canary release"
     git push origin 1.0.152
 
-### edit the source code to return something clearly identifying the version (1.0.156) of code, build, commit, push, docker build, docker push and git tag
+### Edit the source code to return something clearly identifying the version (1.0.156) of code, build, commit, push, docker build, docker push and git tag
 
     vi books/src/main/groovy/example/micronaut/BooksRepositoryImpl.groovy 
     cd books
@@ -55,7 +55,7 @@ The CI/CD pipelines will have managed the following in a real life situation, no
     git tag -a 1.0.156 -m "a release that will be used for the new version of code in a canary release"
     git push origin 1.0.156
 
-### deploy as current and canary as two separate helm releases
+### Deploy as current and canary as two separate helm releases
 
 Make sure you are in the root directory of where ever you have clone this project to.
 
