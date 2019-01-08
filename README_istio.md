@@ -55,3 +55,29 @@ The CI/CD pipelines will have managed the following in a real life situation, no
     git tag -a 1.0.156 -m "a release that will be used for the new version of code in a canary release"
     git push origin 1.0.156
 
+### deploy as current and canary as two separate helm releases
+
+Make sure you are in the root directory of where ever you have clone this project to.
+
+    alias helm="docker run -ti --rm -v $(pwd):/apps:rw -v ~/.kube:/root/.kube -v ~/.minikube:$(echo ~)/.minikube alpine/helm:2.11.0"
+
+Install a 'current' version
+
+    helm install helm/books --name books-current --set image.tag=1.0.152
+    kubectl get deployment books --export=true -o yaml > books.yaml
+    ~/istio-1.0.5/bin/istioctl kube-inject -f books.yaml | kubectl apply -f -
+
+Install a 'canary' version
+
+    helm install helm/books --name books-canary --set image.tag=1.0.156 --set fullnameOverride=books-canary
+    kubectl get deployment books-canary --export=true -o yaml > books-canary.yaml
+    ~/istio-1.0.5/bin/istioctl kube-inject -f books-canary.yaml | kubectl apply -f -
+
+Wait for everything to deploy
+
+    kubectl get pod -w
+    
+Should get to point where you have pods running
+
+    books-7545c86bf6-7bdrz          2/2       Running   0          14h
+    books-canary-589b867d7d-6t8sk   2/2       Running   0          14h
