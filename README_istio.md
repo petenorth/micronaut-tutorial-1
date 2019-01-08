@@ -50,9 +50,6 @@ The CI/CD pipelines will have managed the following in a real life situation, no
     git add books/src/main/groovy/example/micronaut/BooksRepositoryImpl.groovy 
     git commit -m 'changes for v1.0.156'
     git push
-    cd books
-    ./gradlew clean build
-    cd ..
     docker build books -t petenorth/micronaut-books:1.0.156
     docker push petenorth/micronaut-books:1.0.156
     git tag -a 1.0.156 -m "a release that will be used for the new version of code in a canary release"
