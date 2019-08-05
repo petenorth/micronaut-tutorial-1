@@ -1,4 +1,7 @@
 # micronaut-tutorial-1
+
+This project is probably superceeded by https://micronaut-projects.github.io/micronaut-kubernetes/snapshot/guide/
+
 Modifying https://www.infoq.com/articles/micronaut-tutorial-microservices-jvm?utm_source=infoq&amp;utm_campaign=user_page&amp;utm_medium=link to run in a Kubernetes and Openshift environment. 
 
 When running in Openshift, Micronaut detects two environments 'k8s' and 'cloud' . The detection of 'k8s' means that Kubernetes based service discovery can be used.
