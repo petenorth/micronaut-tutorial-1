@@ -1,6 +1,6 @@
 # micronaut-tutorial-1
 
-This project is probably superceeded by https://micronaut-projects.github.io/micronaut-kubernetes/snapshot/guide/
+**_This project is probably superceeded by https://micronaut-projects.github.io/micronaut-kubernetes/snapshot/guide/_**
 
 Modifying https://www.infoq.com/articles/micronaut-tutorial-microservices-jvm?utm_source=infoq&amp;utm_campaign=user_page&amp;utm_medium=link to run in a Kubernetes and Openshift environment. 
 
